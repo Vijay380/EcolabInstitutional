@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Chrome Execution Suite" duration-ms="250064" started-at="2020-03-02T07:18:29Z" finished-at="2020-03-02T07:22:39Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:com.test.acceptancetest.RunTestChrome@ff5b51f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="chrome test" duration-ms="250064" started-at="2020-03-02T07:18:29Z" finished-at="2020-03-02T07:22:39Z">
+      <class name="com.test.acceptancetest.RunTestChrome">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.test.acceptancetest.RunTestChrome@ff5b51f]" name="setUpClass" is-config="true" duration-ms="110" started-at="2020-03-02T12:48:29Z" finished-at="2020-03-02T12:48:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:com.test.acceptancetest.RunTestChrome@ff5b51f]" name="runScenario" duration-ms="95236" started-at="2020-03-02T12:48:29Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-03-02T12:50:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test scenario to create Prospect"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["create Event"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:com.test.acceptancetest.RunTestChrome@ff5b51f]" name="runScenario" duration-ms="154606" started-at="2020-03-02T12:50:04Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-03-02T12:52:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test scenario to create Event"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["create Event"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.test.acceptancetest.RunTestChrome@ff5b51f]" name="tearDownClass" is-config="true" duration-ms="46" started-at="2020-03-02T12:52:39Z" finished-at="2020-03-02T12:52:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.test.acceptancetest.RunTestChrome -->
+    </test> <!-- chrome test -->
+  </suite> <!-- Chrome Execution Suite -->
+</testng-results>

@@ -1,0 +1,145 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-04-27T10:32:26.587Z",
+        "before": [
+          {
+            "output": [
+              "chrome"
+            ],
+            "result": {
+              "duration": 13233107600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.browserInitialization(Scenario)"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Test scenarios TC_OPT_002 to change stage [Build Rapport / Explore Customer Needs] of Opportunity \"Profile: LEX G360 Primary FA + GTW\"",
+        "description": "",
+        "id": "create-ticket;test-scenarios-tc-opt-002-to-change-stage-[build-rapport-/-explore-customer-needs]-of-opportunity-\"profile:-lex-g360-primary-fa-+-gtw\"",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 26584468700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Login into App \"Opportunity\" \"TC_OPT_002\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opportunity\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"TC_OPT_002\"",
+                  "offset": 29
+                }
+              ],
+              "location": "LoginStepDefs.login_into_App(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 273413500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "click on opportunities tab",
+            "match": {
+              "location": "CommonStepDefs.click_on_opportunities_tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3971514300,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "click on existing opportunities \"Opportunity\" \"TC_OPT_002\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opportunity\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"TC_OPT_002\"",
+                  "offset": 46
+                }
+              ],
+              "location": "OpportunitiesStepDefs.click_on_existing_opportunities(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder\u003d\u0027Search Competitors...\u0027]\"}\n  (Session info: chrome\u003d81.0.4044.122)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027SMEDC-LAP022\u0027, ip: \u0027192.168.0.104\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_191\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Users\\yadavvi\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63782}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 3874d6ca15687a41799bcc868c62eea3\n*** Element info: {Using\u003dxpath, value\u003d//input[@placeholder\u003d\u0027Search Competitors...\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat com.test.pages.Opportunities.provideTopCompetitor(Opportunities.java:59)\r\n\tat com.test.stepdefs.OpportunitiesStepDefs.provide_top_competitor(OpportunitiesStepDefs.java:24)\r\n\tat ✽.provide top competitor(file:src/test/resources/features/SalesforceRegression_Suite/Opportunities/Opportunities.feature:22)\r\n",
+              "duration": 32742435900,
+              "status": "failed"
+            },
+            "line": 22,
+            "name": "provide top competitor",
+            "match": {
+              "location": "OpportunitiesStepDefs.provide_top_competitor()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7900,
+              "status": "skipped"
+            },
+            "line": 23,
+            "name": "click on build Rapport stage",
+            "match": {
+              "location": "OpportunitiesStepDefs.click_on_build_Rapport_stage()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Hooks"
+          },
+          {
+            "name": "@TC_OPT_002"
+          },
+          {
+            "name": "@IT"
+          },
+          {
+            "name": "@Opportinities"
+          },
+          {
+            "name": "@Automation"
+          }
+        ]
+      }
+    ],
+    "name": "Create Ticket",
+    "description": "",
+    "id": "create-ticket",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/SalesforceRegression_Suite/Opportunities/Opportunities.feature",
+    "tags": [
+      {
+        "name": "@Hooks",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
