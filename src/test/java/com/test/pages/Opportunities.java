@@ -6,11 +6,13 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.test.baseclass.BaseClass;
 import com.test.utility.ExcelFactory;
@@ -36,19 +38,24 @@ public class Opportunities extends BaseClass{
 	@FindBy(xpath="//button[text()='Next']") private WebElement btnPopUp_Next;
 	@FindBy(xpath="//h3[text()='Select Opportunity Record Type']/../following-sibling::div[1]/div/div/ol/input") private List<WebElement> rdoBtn_G360RecordType;
 	@FindBy(xpath="//div[text()='Edit']") private List<WebElement> btn_Edit;
-	@FindBy(xpath="//a[@title='Build Rapport / Explore Customer Needs']") private WebElement btn_BuildRapport;
+	@FindBy(xpath="//div[contains(@class,'pathassistantPathAssistantTabSet')]//li[3]") private WebElement btn_BuildRapport;
 	@FindBy(xpath="//button[@title='Edit Top - Competitor']") private WebElement btn_EditTopCompetitor;
-	@FindBy(xpath="//span[text()='Mark as Current Stage']") private WebElement btn_marksComplete;
+	@FindBy(xpath="(//button[@title='Clear Selection'])[2]") private WebElement btn_close;
+	@FindBy(xpath="//span[text()='Mark as Current Stage']") public WebElement btn_marksComplete;
+	@FindBy(xpath="//button[.='Mark Stage as Complete']") public WebElement btn_markStageCompleted;
+	
 	
 	
 	public void clickOnMarksAsCOmplete(){
 		System.out.println("marksa as complete");
 		clickElement(btn_marksComplete);
 	}
-	public void clickOn_BuildRapport(){
+
+	public void clickOn_BuildRapport() {
 		System.out.println("click on build rapport");
-		clickElement(btn_BuildRapport);
+		clickElementJavaScript(btn_BuildRapport);
 	}
+
 	public void provideTopCompetitor(){
 		System.out.println("Provide top competitor");
 		
@@ -56,15 +63,15 @@ public class Opportunities extends BaseClass{
 			scrollDownToPixel(500);
 			clickElement(btn_EditTopCompetitor);
 			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(btn_close)).click();
 			WebElement ele =driver.findElement(By.xpath("//input[@placeholder='Search Competitors...']"));
-			
-			
 			setTextField(ele, "TestA");
 			Thread.sleep(3000);
 			WebElement ele2=driver.findElement(By.xpath("//strong[text()='TestA']"));
 			clickElement(ele2);
 			WebElement ele3=driver.findElement(By.xpath("//button[@title='Save']"));
 			clickElement(ele3);
+			wait.until(ExpectedConditions.invisibilityOf(ele3));
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

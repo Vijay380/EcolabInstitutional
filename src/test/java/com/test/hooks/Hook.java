@@ -25,7 +25,7 @@ public class Hook extends BaseClass {
 		launchBrowser();
 	}
 
-	//@After("@Hooks")
+	@After("@Hooks")
 	public void closeBrowser(Scenario scenario) throws Exception {
 		try {
 			if (scenario.isFailed()) {

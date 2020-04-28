@@ -1,5 +1,7 @@
 package com.test.stepdefs;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import com.test.baseclass.BaseClass;
@@ -9,8 +11,9 @@ import com.test.utility.ExcelFactory;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
-public class OpportunitiesStepDefs {
+public class OpportunitiesStepDefs extends BaseClass{
 	
 	private CommonPage commonPage=new CommonPage();
 	private BaseClass baseClass=new BaseClass();
@@ -20,7 +23,6 @@ public class OpportunitiesStepDefs {
 	
 	@Given("provide top competitor")
 	public void provide_top_competitor() {
-		
 		oppty.provideTopCompetitor();
 	}
 
@@ -87,8 +89,15 @@ public class OpportunitiesStepDefs {
 	    Assert.assertTrue(flag,"Unable to select Opportynity record type");
 	}
 
-	
-	
-	
-	
+	@When("I click on Mark stage as complete")
+	public void i_click_on_Mark_stage_as_complete() {
+		clickElementJavaScript(oppty.btn_marksComplete);
+		((JavascriptExecutor)driver).executeScript("setTimeout(function(){debugger;}, 3000)");
+	}
+
+	@Then("I should see success message displayed")
+	public void i_should_see_success_message_displayed() {
+		Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(oppty.btn_markStageCompleted)).isDisplayed(),
+				"Success message displayed");
+	}	
 }

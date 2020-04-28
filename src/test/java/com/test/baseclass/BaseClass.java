@@ -273,8 +273,8 @@ public class BaseClass {
 		boolean flag=false;
 		try{
 		flag= fluentWaitforElement(ele);
-		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", ele);
 		js.executeScript("arguments[0].click();", ele);
 		//reporter.log(LogStatus.PASS, "<font color=\"green\"><h6><b> successfully Clicked on </b></h6></font> <font color=\"black\"><h6><b> ["+ele+"] </b></h6></font> <font color=\"green\"><h6><b>Web Element </b></h6></font>");
 		System.out.println("successfully Clicked on ["+ele+"] Web Element ");

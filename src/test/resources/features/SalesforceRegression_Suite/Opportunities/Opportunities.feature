@@ -21,7 +21,8 @@ Feature: Create Ticket
     And click on existing opportunities "Opportunity" "TC_OPT_002"
     And provide top competitor
     And click on build Rapport stage
-#    And click on Mark stage as complete
+    When I click on Mark stage as complete
+    Then I should see success message displayed
 #   
     
 #    And provide top competitor "Opportunity" "TC_OPT_002"
