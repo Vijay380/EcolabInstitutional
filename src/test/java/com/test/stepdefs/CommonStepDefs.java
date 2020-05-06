@@ -13,6 +13,11 @@ public class CommonStepDefs {
 	private BaseClass baseClass=new BaseClass();
 	
 	
+	@Given("scroll Down To Pixel {int}")
+	public void scroll_Down_To_Pixel(Integer int1) {
+		boolean flag=commonPage.scrollDownToPixel(int1);
+		Assert.assertTrue(flag,"Unable to scroll down ");
+	}
 	@Given("click on opportunities tab")
 	public void click_on_opportunities_tab() {
 		boolean flag=commonPage.clickOnOpportunities_Tab();

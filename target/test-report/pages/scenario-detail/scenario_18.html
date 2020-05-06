@@ -20,7 +20,7 @@ limitations under the License.    --><!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
   <meta name="description" content="Cluecumber Report Plugin [1.0.0] - Scenario Details"> 
   <meta name="author" content="Cluecumber Report Plugin [1.0.0]"> 
-  <title>Scenario Details - 2020/04/23 11:35:20</title>
+  <title>Scenario Details - 2020/05/06 15:19:37</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> 
   <link href="css/cluecumber.css" rel="stylesheet" type="text/css"> 
   <link rel="stylesheet" href="css/dataTables.min.css"> 
@@ -37,13 +37,13 @@ limitations under the License.    --><!doctype html>
      <li class="nav-item"> <a class="nav-link" href="pages/tag-summary.html">All Tags</a> </li> 
      <li class="nav-item"> <a class="nav-link" href="index.html">All Scenarios</a> </li> 
     </ul> 
-    <span class="text-light">2020/04/23 11:35:20</span> 
+    <span class="text-light">2020/05/06 15:19:37</span> 
    </div> 
   </nav> 
   <main role="main" class="container"> 
    <div class="cluecumber-template"> 
     <div class="pb-2 mt-4 mb-2 border-bottom"> 
-     <h3>Scenario 'Test scenario_00014 to Reassign existing customer "Profile: G360 PureForce User + GTW"'</h3> 
+     <h3>Scenario 'Test scenarios TC_OPT_0019 to change stage [Survey] of Opportunity "Profile: LEX MSS NA Area Manager GA"'</h3> 
     </div> 
     <script>
         function resizeIframe(obj) {
@@ -74,10 +74,11 @@ limitations under the License.    --><!doctype html>
          <li class="list-group-item"><strong>0</strong> passed</li> 
          <li class="list-group-item"><strong>1</strong> failed</li> 
          <li class="list-group-item"><strong>5</strong> skipped</li> 
-         <li class="list-group-item"><strong>Time:</strong> 2m 36s 488ms</li> 
+         <li class="list-group-item"><strong>Time:</strong> 2m 39s 328ms</li> 
          <li class="list-group-item"><a href="pages/tag-scenarios/tag_Hooks.html">@Hooks</a></li> 
-         <li class="list-group-item"><a href="pages/tag-scenarios/tag_Tscenario_00021.html">@Tscenario_00021</a></li> 
+         <li class="list-group-item"><a href="pages/tag-scenarios/tag_TC_OPT_0019.html">@TC_OPT_0019</a></li> 
          <li class="list-group-item"><a href="pages/tag-scenarios/tag_IT.html">@IT</a></li> 
+         <li class="list-group-item"><a href="pages/tag-scenarios/tag_Opportinities.html">@Opportinities</a></li> 
          <li class="list-group-item"><a href="pages/tag-scenarios/tag_Automation.html">@Automation</a></li> 
         </ul> 
        </div> 
@@ -87,7 +88,7 @@ limitations under the License.    --><!doctype html>
     <div class="col-sm-12"> 
      <div class="card h-100"> 
       <div class="card-header">
-       Test scenario_00014 to Reassign existing customer "Profile: G360 PureForce User + GTW"
+       Test scenarios TC_OPT_0019 to change stage [Survey] of Opportunity "Profile: LEX MSS NA Area Manager GA"
       </div> 
       <div class="card-body"> 
        <ul class="list-group list-group-flush"> 
@@ -104,7 +105,7 @@ limitations under the License.    --><!doctype html>
           </div> 
           <div class="col-2 text-left"> 
            <nobr>
-            0m 12s 135ms
+            0m 14s 065ms
            </nobr> 
           </div> 
           <div class="col-2 text-right"> 
@@ -126,11 +127,11 @@ limitations under the License.    --><!doctype html>
            </nobr> 
           </div> 
           <div class="col-7 text-left"> 
-           <span data-toggle="tooltip" title="LoginStepDefs.login_into_Application(String)"> Given Login into Application "TC0021" </span> 
+           <span data-toggle="tooltip" title="LoginStepDefs.login_into_App(String,String)"> Given Login into App "Opportunity" "TC_OPT_0019" </span> 
           </div> 
           <div class="col-2 text-left"> 
            <nobr>
-            2m 22s 933ms
+            2m 23s 806ms
            </nobr> 
           </div> 
           <div class="col-2 text-right"> 
@@ -140,7 +141,7 @@ limitations under the License.    --><!doctype html>
          <div class="row"> 
           <div class="col-1"></div> 
           <div class="col-10 text-left border border-danger"> 
-           <code>java.lang.AssertionError: Unable to Navigate on Landing Page expected [true] but found [false] at org.testng.Assert.fail(Assert.java:96) at org.testng.Assert.failNotEquals(Assert.java:776) at org.testng.Assert.assertTrue(Assert.java:44) at com.test.common.ComonActions.performLogin(ComonActions.java:17) at com.test.stepdefs.LoginStepDefs.login_into_Application(LoginStepDefs.java:31) at ✽.Login into Application "TC0021"(file:src/test/resources/features/SalesforceRegression_Suite/Account/Account.feature:215) </code> 
+           <code>java.lang.AssertionError: Unable to Navigate on Landing Page expected [true] but found [false] at org.testng.Assert.fail(Assert.java:96) at org.testng.Assert.failNotEquals(Assert.java:776) at org.testng.Assert.assertTrue(Assert.java:44) at com.test.common.ComonActions.performLogin(ComonActions.java:17) at com.test.stepdefs.LoginStepDefs.login_into_App(LoginStepDefs.java:26) at ✽.Login into App "Opportunity" "TC_OPT_0019"(file:src/test/resources/features/SalesforceRegression_Suite/Opportunities/Opportunities.feature:186) </code> 
           </div> 
           <div class="col-1"></div> 
          </div> 
@@ -151,7 +152,7 @@ limitations under the License.    --><!doctype html>
            </nobr> 
           </div> 
           <div class="col-7 text-left"> 
-           <span data-toggle="tooltip" title="HomePageStepDefs.click_On_CustomerTab()"> And click On CustomerTab </span> 
+           <span data-toggle="tooltip" title="CommonStepDefs.click_on_opportunities_tab()"> And click on opportunities tab </span> 
           </div> 
           <div class="col-2 text-left"> 
            <nobr>
@@ -169,7 +170,7 @@ limitations under the License.    --><!doctype html>
            </nobr> 
           </div> 
           <div class="col-7 text-left"> 
-           <span data-toggle="tooltip" title="CustomerStepDefs.click_on_existing_customer()"> And click on existing customer </span> 
+           <span data-toggle="tooltip" title="OpportunitiesStepDefs.click_on_existing_opportunities(String,String)"> And click on existing opportunities "Opportunity" "TC_OPT_0019" </span> 
           </div> 
           <div class="col-2 text-left"> 
            <nobr>
@@ -187,7 +188,7 @@ limitations under the License.    --><!doctype html>
            </nobr> 
           </div> 
           <div class="col-7 text-left"> 
-           <span data-toggle="tooltip" title="CustomerStepDefs.click_on_Reassign_Prospect_button()"> And click on Reassign Prospect button </span> 
+           <span data-toggle="tooltip" title="OpportunitiesStepDefs.change_opportunities_stage(String)"> And change opportunities stage "Survey" </span> 
           </div> 
           <div class="col-2 text-left"> 
            <nobr>
@@ -205,7 +206,7 @@ limitations under the License.    --><!doctype html>
            </nobr> 
           </div> 
           <div class="col-7 text-left"> 
-           <span data-toggle="tooltip" title="CustomerStepDefs.enter_new_account_owner_name(String)"> And enter new account owner name "TC0021" </span> 
+           <span data-toggle="tooltip" title="OpportunitiesStepDefs.i_click_on_Mark_stage_as_complete()"> When I click on Mark stage as complete </span> 
           </div> 
           <div class="col-2 text-left"> 
            <nobr>
@@ -223,7 +224,7 @@ limitations under the License.    --><!doctype html>
            </nobr> 
           </div> 
           <div class="col-7 text-left"> 
-           <span data-toggle="tooltip" title="TaskStepDefs.click_on_save_button()"> And click on save button </span> 
+           <span data-toggle="tooltip" title="OpportunitiesStepDefs.i_should_see_success_message_displayed()"> Then I should see success message displayed </span> 
           </div> 
           <div class="col-2 text-left"> 
            <nobr>
@@ -247,7 +248,7 @@ limitations under the License.    --><!doctype html>
           </div> 
           <div class="col-2 text-left"> 
            <nobr>
-            0m 01s 419ms
+            0m 01s 457ms
            </nobr> 
           </div> 
           <div class="col-2 text-right"> 
@@ -257,7 +258,7 @@ limitations under the License.    --><!doctype html>
          <div class="row"> 
           <div class="col-1"></div> 
           <div class="col-10 text-left"> 
-           <a class="grouped_elements" rel="images" href="attachments/attachment004.png"> <img src="attachments/attachment004.png" style="width: 100%"> </a> 
+           <a class="grouped_elements" rel="images" href="attachments/attachment009.png"> <img src="attachments/attachment009.png" style="width: 100%"> </a> 
           </div> 
           <div class="col-1"></div> 
          </div> </li> 
@@ -269,7 +270,7 @@ limitations under the License.    --><!doctype html>
   </main> 
   <footer class="footer navbar-dark bg-dark"> 
    <div class="container-fluid"> 
-    <span class="text-muted">Generated by Cluecumber Report Plugin [1.0.0], 2020/04/23 11:35:20.</span> 
+    <span class="text-muted">Generated by Cluecumber Report Plugin [1.0.0], 2020/05/06 15:19:37.</span> 
    </div> 
   </footer>
   <script src="js/jquery.min.js"></script> 
@@ -301,7 +302,7 @@ limitations under the License.    --><!doctype html>
   "data" : {
     "labels" : [ "Step 1", "Step 2", "Step 3", "Step 4", "Step 5", "Step 6" ],
     "datasets" : [ {
-      "data" : [ 142933.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+      "data" : [ 143806.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
       "backgroundColor" : [ "rgba(220,53,69,1.000)", "rgba(255,193,7,1.000)", "rgba(255,193,7,1.000)", "rgba(255,193,7,1.000)", "rgba(255,193,7,1.000)", "rgba(255,193,7,1.000)" ],
       "label" : "Step runtime"
     } ]

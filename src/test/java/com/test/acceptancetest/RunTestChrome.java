@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = { "src/test/resources/features" }, glue = { "com.test" }, tags = 
-{ "@TC_OPT_002"
+{ "@TC_OPT_009"
 
 }, plugin = {"json:target/cucumber-reports/CucumberTestReportChrome.json"})
 

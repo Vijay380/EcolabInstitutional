@@ -36,10 +36,10 @@ public class CustomerStepDefs {
 	    Assert.assertTrue(flag,"Unable to click on New Contact button");
 	}
 
-	@Given("enter last name of contact {string}")
-	public void enter_last_name_of_contact(String string) {
+	@Given("enter last name of contact {string} {string}")
+	public void enter_last_name_of_contact(String sheetName,String testCaseId) {
 		
-		boolean flag =custPage.enterlastNameOfContact(excel.getExcelRowData("TestData", string)[3]);
+		boolean flag =custPage.enterlastNameOfContact(excel.getExcelRowData(sheetName, testCaseId)[3]);
 		Assert.assertTrue(flag,"Unable to enter contact last name");
 	}
 	@Given("click on Reassign Prospect button")
@@ -48,14 +48,14 @@ public class CustomerStepDefs {
 	    Assert.assertTrue(flag,"Unable to click on Reassign prospect button");
 	}
 
-	@Given("enter new account owner name {string}")
-	public void enter_new_account_owner_name(String string) {
-		boolean flag = custPage.enterAccountOwnerName(excel.getExcelRowData("TestData", string)[3]);
+	@Given("enter new account owner name {string} {string}")
+	public void enter_new_account_owner_name(String sheetName,String testCaseId) {
+		boolean flag = custPage.enterAccountOwnerName(excel.getExcelRowData(sheetName, testCaseId)[3]);
 		Assert.assertTrue(flag,"Unable to enter new Account owner name");
 	}
-	@Given("update account name {string}")
-	public void update_account_name(String string) {
-		boolean flag = custPage.updateAccountName(string);
+	@Given("update account name {string} {string}")
+	public void update_account_name(String sheetName,String testCaseId) {
+		boolean flag = custPage.updateAccountName(sheetName,testCaseId);
 	    Assert.assertTrue(flag,"Unable to update Account Name");
 	}
 	
@@ -65,15 +65,15 @@ public class CustomerStepDefs {
 	    Assert.assertTrue(flag,"Unable to click on clone button");
 	}
 	
-	@Given("enter Team Role {string}")
-	public void enter_Team_Role(String string) {
-		boolean flag = custPage.enterTeamRole(string);
+	@Given("enter Team Role {string} {string}")
+	public void enter_Team_Role(String sheetName,String testCaseId) {
+		boolean flag = custPage.enterTeamRole(sheetName,testCaseId);
 	    Assert.assertTrue(flag,"Unable to enter team role");
 	}
 	
-	@Given("enter team username {string}")
-	public void enter_team_username(String string) {
-		boolean flag = custPage.enterTeamUserName(string);
+	@Given("enter team username {string} {string}")
+	public void enter_team_username(String sheetName,String testCaseId) {
+		boolean flag = custPage.enterTeamUserName(sheetName,testCaseId);
 	    Assert.assertTrue(flag,"Unable to enter team username");
 	}
 	
@@ -138,9 +138,9 @@ public class CustomerStepDefs {
 
 	
 	
-	@Given("populate Required Field To Create Prospect {string}")
-	public void populate_Required_Field_To_Create_Prospect(String string) {
-		GetUserData.setAccountName(custPage.populateRequiredFieldToCreateProspect(string));
+	@Given("populate Required Field To Create Prospect {string} {string}")
+	public void populate_Required_Field_To_Create_Prospect(String sheetName,String testCaseId) {
+		GetUserData.setAccountName(custPage.populateRequiredFieldToCreateProspect(sheetName,testCaseId));
 	}
 	
 	

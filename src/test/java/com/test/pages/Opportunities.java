@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,7 +23,8 @@ public class Opportunities extends BaseClass{
 	
 	//BasePage  basePage=null;
 	//public ExtentTest reporter=null;
-	public ExcelFactory excelFactory=null;
+	
+	private ExcelFactory excelFactory=new ExcelFactory();
 	public Opportunities() {
 		PageFactory.initElements(driver, this);
 	}
@@ -41,11 +43,96 @@ public class Opportunities extends BaseClass{
 	@FindBy(xpath="//div[contains(@class,'pathassistantPathAssistantTabSet')]//li[3]") private WebElement btn_BuildRapport;
 	@FindBy(xpath="//button[@title='Edit Top - Competitor']") private WebElement btn_EditTopCompetitor;
 	@FindBy(xpath="(//button[@title='Clear Selection'])[2]") private WebElement btn_close;
-	@FindBy(xpath="//span[text()='Mark as Current Stage']") public WebElement btn_marksComplete;
-	@FindBy(xpath="//button[.='Mark Stage as Complete']") public WebElement btn_markStageCompleted;
+	@FindBy(xpath="//span[text()='Mark as Current Stage'] | //span[text()='Select Closed Stage'] | //span[text()='Change Closed Stage']") public WebElement btn_marksComplete;
+	@FindBy(xpath="//button[.='Mark Stage as Complete'] | //span[text()='Change Closed Stage']") public WebElement btn_markStageCompleted;
+	@FindBy(xpath="//button[text()='Done']") public WebElement btn_DoneCloseStage;
+	@FindBy(xpath="//button[@title='Edit G360 Initiative']") public WebElement btn_G360Initiative;
+	@FindBy(xpath="//span[@title='Global Sales Blitz']") public WebElement multiSelect_GlobalSalesBlitz;
+	@FindBy(xpath="(//button[@title='Move selection to Chosen'])[1]//span") public WebElement rightArrow_G360Initiative;
+	@FindBy(xpath="//button[@title='Save']") public List<WebElement> btn_Save;
+	@FindBy(xpath="//div[text()='Add Opportunity Team Members']") public List<WebElement> btn_AddOpporTeamMember;
+	@FindBy(xpath="//span[text()='Edit User: Item 1']") private WebElement txtbox_OpporTeamUser;
+	@FindBy(xpath="//input[@title='Search People']") private WebElement txtbox_OpporSearchPeople;
+	@FindBy(xpath="(//span[text()='Save'])[2]") private WebElement btn_SaveOppor;
 	
 	
-	
+	public boolean clickOnSaveButton(){
+		System.out.println("click on save button");
+		
+		scrollDownToPixel(550);
+		boolean flag=clickElementJavaScript(btn_SaveOppor);
+		
+		return flag;
+	}
+	public boolean enterOpporTeamUserName(String sheetName,String text){
+		System.out.println("Enter Oppor team username");
+		clickElementJavaScript(txtbox_OpporTeamUser);
+		String[] data=excelFactory.getExcelRowData(sheetName,text);
+		System.out.println("data length="+data.length);
+		boolean flag = setTextField(txtbox_OpporSearchPeople, data[4]);
+		WebElement ele=driver.findElement(By.xpath("//div[@title='"+data[4]+"']"));
+		clickElement(ele);
+		new Actions(driver).sendKeys(Keys.TAB).perform();
+		return flag;
+	}
+	public boolean clickOnAddOpporTeamMember(){
+		System.out.println("click on Oppor Team Member");
+		boolean flag = false;
+		for(WebElement ele: btn_AddOpporTeamMember){
+			if(ele.isDisplayed()){
+				flag = clickElementJavaScript(ele);
+				break;
+			}
+		}
+		
+		return flag;
+	}
+	public boolean G360Initiative(){
+		boolean flag=false;
+		try{
+		System.out.println("Add 360 initiative");
+		clickElementJavaScript(btn_G360Initiative);
+		clickElement(multiSelect_GlobalSalesBlitz);
+		clickElementJavaScript(rightArrow_G360Initiative);
+		for(WebElement ele : btn_Save){
+			if(ele.isDisplayed()){
+				flag = clickElement(ele);
+				System.out.println("Successfully clicked on save button");
+				break;
+			}
+		}
+		}catch(Exception e){
+			
+		}
+		return flag;
+		
+	}
+	public boolean clickOnDoneButton(){
+		System.out.println("click on done button");
+		boolean flag=false;
+		try{
+			Thread.sleep(4000);
+			flag = clickElement(btn_DoneCloseStage);
+			System.out.println("successfully clicked on done button");
+		}catch(Exception e){
+			System.out.println("Unable to click on done button");
+		}
+		
+		return flag;
+		
+	}
+	public boolean changeOpporStage(String stage){
+		System.out.println("Change oppor stage to ["+stage+"]");
+		boolean flag=false;
+		try{
+			Thread.sleep(2000);
+			//WebElement ele=driver.findElement(By.xpath("//a[@title='"+stage+"'] | //a[@title='Closed Won']"));
+			flag = clickElementJavaScript(driver.findElement(By.xpath("//a[@title='"+stage+"'] | //a[@title='Closed Won']")));
+		}catch(Exception e){
+			System.out.println("unable to click on ["+stage+"] stage");
+		}
+		return flag;
+	}  
 	public void clickOnMarksAsCOmplete(){
 		System.out.println("marksa as complete");
 		clickElement(btn_marksComplete);
@@ -55,10 +142,31 @@ public class Opportunities extends BaseClass{
 		System.out.println("click on build rapport");
 		clickElementJavaScript(btn_BuildRapport);
 	}
-
-	public void provideTopCompetitor(){
+	public boolean provideTopCompetitor_V2(){
 		System.out.println("Provide top competitor");
-		
+		boolean flag=false;
+		try {
+			scrollDownToPixel(500);
+			//clickElement(btn_EditTopCompetitor);
+			Thread.sleep(2000);
+			//wait.until(ExpectedConditions.visibilityOf(btn_close)).click();
+			WebElement ele =driver.findElement(By.xpath("//input[@placeholder='Search Competitors...']"));
+			setTextField(ele, "TestA");
+			Thread.sleep(3000);
+			WebElement ele2=driver.findElement(By.xpath("//strong[text()='TestA']"));
+			clickElement(ele2);
+			//WebElement ele3=driver.findElement(By.xpath("//button[@title='Save']"));
+			//flag = clickElement(ele3);
+			//wait.until(ExpectedConditions.invisibilityOf(ele3));
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return flag;
+	}
+	public boolean provideTopCompetitor(){
+		System.out.println("Provide top competitor");
+		boolean flag=false;
 		try {
 			scrollDownToPixel(500);
 			clickElement(btn_EditTopCompetitor);
@@ -70,12 +178,13 @@ public class Opportunities extends BaseClass{
 			WebElement ele2=driver.findElement(By.xpath("//strong[text()='TestA']"));
 			clickElement(ele2);
 			WebElement ele3=driver.findElement(By.xpath("//button[@title='Save']"));
-			clickElement(ele3);
+			flag = clickElement(ele3);
 			wait.until(ExpectedConditions.invisibilityOf(ele3));
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return flag;
 	}
 	public boolean clickOnExistingOppty(String text){
 		System.out.println("click on existing oppty");
@@ -171,15 +280,11 @@ public class Opportunities extends BaseClass{
 				break;
 			}
 		}
-		selectCloseDateForOpportunities();
+		//selectCloseDateForOpportunities();
 		Thread.sleep(4000);
 		setTextField(txtbox_Amount, amt);
 		flag = selectStageFromDropDown(stage);
-//		WebElement ele =driver.findElement(By.xpath("//input[@title='Search Competitors']"));
-//		setTextField(ele, topComptetior);
-//		Thread.sleep(3000);
-//		WebElement ele2=driver.findElement(By.xpath("//div[@title='TestA']"));
-//		clickElement(ele2);
+		provideTopCompetitor_V2();
 		}catch(Exception e){
 			
 		}
@@ -231,7 +336,16 @@ public class Opportunities extends BaseClass{
 			String[] sArr=date1.split("/");
 			System.out.println(sArr[0]);
 			System.out.println(sArr[1]);
-			WebElement eleDate=driver.findElement(By.xpath("//div[@class='dateBar']/following-sibling::div[1]//td//span[text()='"+sArr[1]+"']"));
+			// single date format
+			WebElement eleDate=null;
+			if(sArr.length==2){
+				eleDate=driver.findElement(By.xpath("//div[@class='dateBar']/following-sibling::div[1]//td//span[text()='"+sArr[1]+"']"));
+			}else{
+				String d=sArr[1];
+				char singleDigitDate=d.charAt(1);
+				eleDate=driver.findElement(By.xpath("//div[@class='dateBar']/following-sibling::div[1]//td//span[text()='"+singleDigitDate+"']"));
+			}
+			
 			flag = clickElementJavaScript(eleDate);
 			System.out.println("successfully closed date salected."+flag);
 		}catch(Exception e) {

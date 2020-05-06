@@ -27,9 +27,9 @@ public class TaskStepDefs {
 		boolean flag=task.selectProgram(excel.getExcelRowData("TestData", string)[4]);
 		Assert.assertTrue(flag,"Unable to select program type");
 	}
-	@Given("enter task subject {string}")
-	public void enter_task_subject(String string)  {
-		boolean flag=task.enterTaskSubject(excel.getExcelRowData("TestData", string)[3]);
+	@Given("enter task subject {string} {string}")
+	public void enter_task_subject(String sheetName,String testCaseId)  {
+		boolean flag=task.enterTaskSubject(excel.getExcelRowData(sheetName, testCaseId)[3]);
 		Assert.assertTrue(flag,"Unable to enter subject of Task");
 	}
 	@Given("click on Next Button")

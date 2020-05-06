@@ -3,14 +3,14 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-04-27T10:32:26.587Z",
+        "start_timestamp": "2020-05-06T11:06:56.946Z",
         "before": [
           {
             "output": [
               "chrome"
             ],
             "result": {
-              "duration": 13233107600,
+              "duration": 15517899900,
               "status": "passed"
             },
             "match": {
@@ -18,20 +18,31 @@
             }
           }
         ],
-        "line": 18,
-        "name": "Test scenarios TC_OPT_002 to change stage [Build Rapport / Explore Customer Needs] of Opportunity \"Profile: LEX G360 Primary FA + GTW\"",
+        "line": 84,
+        "name": "Test scenarios TC_OPT_009 to create Opportunity \"Profile: LEX G360 District Manager + GTW\"",
         "description": "",
-        "id": "create-ticket;test-scenarios-tc-opt-002-to-change-stage-[build-rapport-/-explore-customer-needs]-of-opportunity-\"profile:-lex-g360-primary-fa-+-gtw\"",
+        "id": "opportunities;test-scenarios-tc-opt-009-to-create-opportunity-\"profile:-lex-g360-district-manager-+-gtw\"",
+        "after": [
+          {
+            "result": {
+              "duration": 739055600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.closeBrowser(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 26584468700,
+              "duration": 16045258400,
               "status": "passed"
             },
-            "line": 19,
-            "name": "Login into App \"Opportunity\" \"TC_OPT_002\"",
+            "line": 85,
+            "name": "Login into App \"Opportunity\" \"TC_OPT_009\"",
             "match": {
               "arguments": [
                 {
@@ -39,7 +50,7 @@
                   "offset": 15
                 },
                 {
-                  "val": "\"TC_OPT_002\"",
+                  "val": "\"TC_OPT_009\"",
                   "offset": 29
                 }
               ],
@@ -49,10 +60,10 @@
           },
           {
             "result": {
-              "duration": 273413500,
+              "duration": 232891100,
               "status": "passed"
             },
-            "line": 20,
+            "line": 86,
             "name": "click on opportunities tab",
             "match": {
               "location": "CommonStepDefs.click_on_opportunities_tab()"
@@ -61,48 +72,107 @@
           },
           {
             "result": {
-              "duration": 3971514300,
+              "duration": 7243858000,
               "status": "passed"
             },
-            "line": 21,
-            "name": "click on existing opportunities \"Opportunity\" \"TC_OPT_002\"",
+            "line": 87,
+            "name": "click On New Button",
+            "match": {
+              "location": "CommonStepDefs.click_On_New_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3624015000,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "select opportunity record type",
+            "match": {
+              "location": "OpportunitiesStepDefs.select_opportunity_record_type()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 361880900,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "click on next button",
+            "match": {
+              "location": "OpportunitiesStepDefs.click_on_next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25034800,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "switch To ChildWindow",
+            "match": {
+              "location": "CommonStepDefs.switch_To_ChildWindow()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58653412400,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "populate data to create opportunity \"Opportunity\" \"TC_OPT_009\"",
             "match": {
               "arguments": [
                 {
                   "val": "\"Opportunity\"",
-                  "offset": 32
+                  "offset": 36
                 },
                 {
-                  "val": "\"TC_OPT_002\"",
-                  "offset": 46
+                  "val": "\"TC_OPT_009\"",
+                  "offset": 50
                 }
               ],
-              "location": "OpportunitiesStepDefs.click_on_existing_opportunities(String,String)"
+              "location": "OpportunitiesStepDefs.populate_data_to_create_opportunity(String,String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder\u003d\u0027Search Competitors...\u0027]\"}\n  (Session info: chrome\u003d81.0.4044.122)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027SMEDC-LAP022\u0027, ip: \u0027192.168.0.104\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_191\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Users\\yadavvi\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63782}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 3874d6ca15687a41799bcc868c62eea3\n*** Element info: {Using\u003dxpath, value\u003d//input[@placeholder\u003d\u0027Search Competitors...\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat com.test.pages.Opportunities.provideTopCompetitor(Opportunities.java:59)\r\n\tat com.test.stepdefs.OpportunitiesStepDefs.provide_top_competitor(OpportunitiesStepDefs.java:24)\r\n\tat ✽.provide top competitor(file:src/test/resources/features/SalesforceRegression_Suite/Opportunities/Opportunities.feature:22)\r\n",
-              "duration": 32742435900,
-              "status": "failed"
+              "duration": 5457068300,
+              "status": "passed"
             },
-            "line": 22,
-            "name": "provide top competitor",
+            "line": 92,
+            "name": "select close date for opportunities",
             "match": {
-              "location": "OpportunitiesStepDefs.provide_top_competitor()"
+              "location": "OpportunitiesStepDefs.select_close_date_for_opportunities()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 7900,
-              "status": "skipped"
+              "duration": 10297764200,
+              "status": "passed"
             },
-            "line": 23,
-            "name": "click on build Rapport stage",
+            "line": 93,
+            "name": "click on opportunities save button",
             "match": {
-              "location": "OpportunitiesStepDefs.click_on_build_Rapport_stage()"
+              "location": "OpportunitiesStepDefs.click_on_opportunities_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1219900,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "switch To Parent Window",
+            "match": {
+              "location": "CustomerStepDefs.switch_To_Parent_Window()"
             },
             "keyword": "And "
           }
@@ -112,10 +182,7 @@
             "name": "@Hooks"
           },
           {
-            "name": "@TC_OPT_002"
-          },
-          {
-            "name": "@IT"
+            "name": "@TC_OPT_009"
           },
           {
             "name": "@Opportinities"
@@ -126,9 +193,9 @@
         ]
       }
     ],
-    "name": "Create Ticket",
+    "name": "Opportunities",
     "description": "",
-    "id": "create-ticket",
+    "id": "opportunities",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/SalesforceRegression_Suite/Opportunities/Opportunities.feature",
     "tags": [

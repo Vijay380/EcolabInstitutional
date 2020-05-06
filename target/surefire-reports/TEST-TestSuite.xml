@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="78.066" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="119.021" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_191\bin"/>
     <property name="java.vm.version" value="25.191-b12"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\BDDFramework\EcolabAutomation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\yadavvi\git\EcolabInstitutional"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\BDDFramework\EcolabAutomation"/>
+    <property name="user.dir" value="C:\Users\yadavvi\git\EcolabInstitutional"/>
     <property name="java.runtime.version" value="1.8.0_191-b12"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_191\lib\endorsed"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="D:\BDDFramework\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4488297223485703143.tmp"/>
+    <property name="classworlds.conf" value="D:\BDDFrameworkNew\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8424614511803737494.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\python\Lib;C:\python;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\yadavvi\AppData\Local\Microsoft\WindowsApps;C:\python\DLLs;C:\python\Lib;C:\python\Scripts;C:\Users\yadavvi\AppData\Local\Programs\Git\cmd;&quot;C:\Users\yadavvi\AppData\Local\Programs\Microsoft VS Code\bin;C:\apache-maven-3.6.1\bin&quot;;C:\Users\yadavvi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Salesforce CLI\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\apache-maven-3.6.2\bin;;C:\Users\yadavvi\Downloads\eclipse-jee-neon-3-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -52,7 +52,7 @@
     <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_191\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_191\lib\resources.jar;C:\Program Files\Java\jre1.8.0_191\lib\rt.jar;C:\Program Files\Java\jre1.8.0_191\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_191\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_191\lib\jce.jar;C:\Program Files\Java\jre1.8.0_191\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_191\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_191\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="D:\BDDFramework\EcolabAutomation\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\yadavvi\git\EcolabInstitutional\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -60,135 +60,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="runScenario" classname="com.test.acceptancetest.RunTestChrome" time="77.066">
-    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Search Competitors...&apos;]&quot;}&#10;  (Session info: chrome=81.0.4044.122)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;SMEDC-LAP022&apos;, ip: &apos;192.168.0.104&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\yadavvi\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63782}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 3874d6ca15687a41799bcc868c62eea3&#10;*** Element info: {Using=xpath, value=//input[@placeholder=&apos;Search Competitors...&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Search Competitors...']"}
-  (Session info: chrome=81.0.4044.122)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'SMEDC-LAP022', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\yadavvi\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63782}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 3874d6ca15687a41799bcc868c62eea3
-*** Element info: {Using=xpath, value=//input[@placeholder='Search Competitors...']}
-</failure>
-    <system-out><![CDATA[Inside login method
-path od test data is::D:\BDDFramework\EcolabAutomation\src\test\resources\testData\TestData.xlsx
-rowNumber: 4
-TC ID: TC_OPT_002
-cell value...Label
-5
-path od test data is::D:\BDDFramework\EcolabAutomation\src\test\resources\testData\TestData.xlsx
-rowNumber: 4
-TC ID: TC_OPT_002
-cell value...Label
-5
-uname..autouser@lexprmfagtw.com.uat   password...Ecolab123
-Entering username..autouser@lexprmfagtw.com.uat 
-Entering password..Ecolab123
-before clicking login button in java file
-Element Not found trying again - OWS (3874d6ca15687a41799bcc868c62eea3)] -> id: Login]
-successfully Clicked on [Proxy element for: DefaultElementLocator 'By.id: Login'] Web Element 
-click on Opportunities Tab
-Element Not found trying again - OWS (3874d6ca15687a41799bcc868c62eea3)] -> xpath: //a[@title='Opportunities']/span]
-successfully Clicked on [[[ChromeDriver: chrome on WINDOWS (3874d6ca15687a41799bcc868c62eea3)] -> xpath: //a[@title='Opportunities']/span]] Web Element 
-path od test data is::D:\BDDFramework\EcolabAutomation\src\test\resources\testData\TestData.xlsx
-rowNumber: 4
-TC ID: TC_OPT_002
-cell value...Label
-5
-click on existing oppty
-Element Not found trying again - OWS (3874d6ca15687a41799bcc868c62eea3)] -> xpath: (//a[text()='UpdatedAccountName2'])[1]]
-Element Not found trying again - OWS (3874d6ca15687a41799bcc868c62eea3)] -> xpath: (//a[text()='UpdatedAccountName2'])[1]]
-successfully Clicked on [[[ChromeDriver: chrome on WINDOWS (3874d6ca15687a41799bcc868c62eea3)] -> xpath: (//a[text()='UpdatedAccountName2'])[1]]] Web Element 
-Provide top competitor
-Element Not found trying again - OWS (3874d6ca15687a41799bcc868c62eea3)] -> xpath: //button[@title='Edit Top - Competitor']]
-successfully Clicked on [Proxy element for: DefaultElementLocator 'By.xpath: //button[@title='Edit Top - Competitor']'] Web Element 
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 36496
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1587983548.649][WARNING]: This version of ChromeDriver has not been tested with Chrome version 81.
-[1587983550.660][WARNING]: Timed out connecting to Chrome, retrying...
-Apr 27, 2020 4:02:32 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-[1587983554.749][WARNING]: Timed out connecting to Chrome, retrying...
-[1587983558.032][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983558.134][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983558.287][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983558.389][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983558.566][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983558.772][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983558.873][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983559.003][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983559.105][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983559.254][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983559.357][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983559.462][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983559.563][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983559.664][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983559.766][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983566.130][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983566.231][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983566.367][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983566.469][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983569.521][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983569.622][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983569.862][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983569.964][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983570.065][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983570.166][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983570.268][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983570.369][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983570.472][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983570.655][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983570.756][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983570.858][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983570.960][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983571.062][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983571.163][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983571.265][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983571.366][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983571.468][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983571.570][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983571.674][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983571.812][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983571.925][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983572.117][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983572.219][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983572.324][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983572.426][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983572.528][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983572.629][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983572.731][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983572.832][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983572.934][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.036][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.140][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.241][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.342][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.444][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.546][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.647][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.748][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.850][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983573.951][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983574.121][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983574.226][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983574.327][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983574.428][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983574.530][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983574.632][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983574.736][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983574.839][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983574.943][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983575.045][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983575.146][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983575.248][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983575.350][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983575.455][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983575.557][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587983575.658][SEVERE]: Timed out receiving message from renderer: 0.100
-]]></system-err>
-  </testcase>
+  <testcase name="runScenario" classname="com.test.acceptancetest.RunTestChrome" time="118.362"/>
 </testsuite>

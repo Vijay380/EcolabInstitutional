@@ -40,10 +40,12 @@ public class TaskPage extends BaseClass {
 		List<WebElement> savebtns=driver.findElements(By.xpath("//span[text()='Save']"));
 		System.out.println("Total save buttons:"+savebtns.size());
 		for(int i=0;i<savebtns.size();i++){
+			System.out.println("first element is "+savebtns.get(i).getTagName());
+			System.out.println("first element is 2 "+savebtns.get(i).getText());
 			if(savebtns.get(i).isDisplayed() && savebtns.get(i).isEnabled()){
 				//savebtns.get(i).click();
-				clickElement(savebtns.get(i));
-				flag=true;
+				flag = clickElementJavaScript(savebtns.get(i));
+				
 				System.out.println("Successfully clicked on save button");
 				break;
 			}

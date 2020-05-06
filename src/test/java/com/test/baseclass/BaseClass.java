@@ -142,14 +142,17 @@ public class BaseClass {
 		jse.executeScript("arguments[0].scrollIntoView();", element);
 		System.out.println("scrolled to "+element+" web element");
 	} 
-	public void scrollDownToPixel(int pixel) {
+	public boolean scrollDownToPixel(int pixel) {
+		boolean flag=false;
 		try{
 			Thread.sleep(10000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,"+pixel+")", "");
+		flag=true;
 		}catch(Exception e){
 			System.out.println("Unable to scroll down to reach to webelement");
 		}
+		return flag;
 	}
 	public void scrollToBottom(){
 		try {

@@ -25,15 +25,15 @@ public class NoteStepDef {
 	    boolean flag=notePage.clickOnAddRecordButton();
 	    Assert.assertTrue(flag,"Unable to click on Add Record Button");
 	}
-	@Given("enter note description {string}")
-	public void enter_note_description(String string) {
-		boolean flag=notePage.enterNoteDescription(excel.getExcelRowData("TestData", string)[4]);
+	@Given("enter note description {string} {string}")
+	public void enter_note_description(String sheetName,String testCaseId) {
+		boolean flag=notePage.enterNoteDescription(excel.getExcelRowData(sheetName, testCaseId)[4]);
 		Assert.assertTrue(flag,"Unable to enter Note subject");
 	}
 	
-	@Given("enter subject of Note {string}")
-	public void enter_subject_of_Note(String string) {
-		boolean flag=notePage.enterSubjectOfNote(excel.getExcelRowData("TestData", string)[3]);
+	@Given("enter subject of Note {string} {string}")
+	public void enter_subject_of_Note(String sheetName,String testCaseId) {
+		boolean flag=notePage.enterSubjectOfNote(excel.getExcelRowData(sheetName, testCaseId)[3]);
 		Assert.assertTrue(flag,"Unable to enter Note Description");
 	}
 
